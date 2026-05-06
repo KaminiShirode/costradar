@@ -1,0 +1,35 @@
+{
+  "name": "costradar",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.3",
+    "@supabase/supabase-js": "^2.105.3",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "resend": "^3.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5",
+    "vite-tsconfig-paths": "^4.3.0",
+    "vitest": "^1.5.0"
+  }
+}
