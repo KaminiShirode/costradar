@@ -14,3 +14,21 @@ Anthropic keys — app won't work end to end without them. One test
 still failing (Claude Pro optimal detection — logic issue to fix).
 **Plan for tomorrow:** Supabase setup, get all API keys, .env.local, 
 deploy to Vercel.
+
+## Day 2 — 2025-05-08
+**Hours worked:** 5
+**What I did:** Fixed Tailwind CSS — was using v4 syntax but Next.js 
+14 needs v3. Switched postcss config. Created Supabase project, ran 
+SQL to create audits and leads tables. Connected .env.local with all 
+API keys — Supabase, Resend, Anthropic. Full audit flow working end 
+to end locally — form → results → shareable URL. Fixed Supabase 
+TypeScript type error in audit route using type cast. CI pipeline 
+now green on GitHub. Started Vercel deploy — hit project name 
+conflict, will resolve tomorrow.
+**What I learned:** Next.js 14 needs Tailwind v3 not v4. Supabase 
+generated types can conflict with insert operations — casting to any 
+is acceptable for MVP. Vercel auto-deploys on every git push.
+**Blockers / what I'm stuck on:** Vercel deploy not complete yet — 
+project name conflict. Will fix tomorrow.
+**Plan for tomorrow:** Complete Vercel deploy, get live URL, update 
+NEXT_PUBLIC_BASE_URL, test full flow on production.
