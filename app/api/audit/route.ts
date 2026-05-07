@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
 
   const result = runAudit(input)
 
-  const { data, error } = await supabase
+  const { data, error } = await (supabase as any)
     .from('audits')
     .insert({
       tools: input.tools,
