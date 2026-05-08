@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Save lead to Supabase
-  const { error: dbError } = await supabase.from('leads').insert({
+  const { error: dbError } = await (supabase as any).from('leads').insert({
     email: body.email,
     company_name: body.companyName ?? null,
     role: body.role ?? null,
