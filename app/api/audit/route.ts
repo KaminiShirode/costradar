@@ -18,7 +18,10 @@ export async function POST(req: NextRequest) {
 
   const result = runAudit(input)
 
-  const { data, error } = await (supabase as any)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const db = supabase as any
+
+  const { data, error } = await db
     .from('audits')
     .insert({
       tools: input.tools,
@@ -50,7 +53,10 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Missing id' }, { status: 400 })
   }
 
-  const { data, error } = await supabase
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const db = supabase as any
+
+  const { data, error } = await db
     .from('audits')
     .select('*')
     .eq('id', id)
