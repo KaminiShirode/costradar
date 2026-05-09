@@ -27,3 +27,13 @@
 **Blockers / what I'm stuck on:** Need to do user interviews — haven't started yet.
 
 **Plan for tomorrow:** User interviews, fix failing test, Lighthouse scores, polish UI.
+
+## Day 4 — 2025-05-09
+**Hours worked:** 3
+**What I did:** Conducted 3 user interviews today. Talked to Aniket (developer at Globant), Tejas (senior dev at Reval Analytics), and Bhushan (team lead at Accionlab). All 10-15 minute conversations over WhatsApp or in person. Key insight — individual developers at large companies don't feel AI cost pain at all since company pays. Target user is clearly team leads and founders at startups who see the bill. Tejas surprised me — he wants to spend smarter not less, would pay for a tool that 2-3x his velocity. Bhushan knows they overspend on Claude Code but has no time to research alternatives — exactly the problem CostRadar solves. Wrote up all 3 interviews in USER_INTERVIEWS.md.
+
+**What I learned:** The pain point is not just saving money — it's saving time on researching alternatives. Target user is much clearer now after talking to real people.
+
+**Blockers / what I'm stuck on:** One test still failing. Lighthouse not run yet. README needs screenshots.
+
+**Plan for tomorrow:** Fix failing test, run Lighthouse on live URL, take 3 screenshots for README, start REFLECTION.md.
