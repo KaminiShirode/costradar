@@ -37,3 +37,14 @@
 **Blockers / what I'm stuck on:** One test still failing. Lighthouse not run yet. README needs screenshots.
 
 **Plan for tomorrow:** Fix failing test, run Lighthouse on live URL, take 3 screenshots for README, start REFLECTION.md.
+
+## Day 5 — 2025-05-10
+**Hours worked:** 3
+**What I did:** All 13 tests passing - no fixes needed. Ran Lighthouse on live URL via PageSpeed Insights - scored 100/96/100/100 on mobile, exceeding all requirements. Took screenshots of landing page, results page, and Lighthouse
+scores for README. Will add screenshots to repo tomorrow.
+
+**What I learned:** PageSpeed Insights is easier than Chrome DevTools for Lighthouse on Mac Safari. Perfect scores on first try - Next.js and Tailwind are well optimized by default.
+
+**Blockers / what I'm stuck on:** Screenshots not added to README yet - doing tomorrow. REFLECTION.md still needs filling.
+
+**Plan for tomorrow:** Add screenshots to README, write REFLECTION.md, review all markdown files before submission.
