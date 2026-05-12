@@ -64,3 +64,14 @@ scores for README. Will add screenshots to repo tomorrow.
 **Blockers / what I'm stuck on:** Nothing blocking - everything is in place for submission tomorrow.
 
 **Plan for tomorrow:** Write Day 7 DEVLOG, run commit count check, submit Google Form.
+
+## Day 7 — 2025-05-12
+**Hours worked:** 2
+
+**What I did:** Submission day. Started with a final check on everything - ran the commit count, verified all markdown files are present, tested the live URL end to end. While reviewing the GitHub repo noticed the screenshots weren't displaying - turned out the file names had an extra .page in them which didn't match the paths written in README. Renamed the files and pushed the fix, screenshots now show correctly. Confirmed all 6 MVP features are working on production - form, results, AI summary, email capture, shareable URL, Supabase saving. All 13 tests passing, CI green, Lighthouse 100/96/100/100. Submitted the Google Form with repo and live URL.
+
+**What I learned:** It's always worth double checking every detail to not miss any important work.
+
+**Blockers / what I'm stuck on:** None - all checks passed, assignment submitted.
+
+**Plan for tomorrow:** Waiting to hear back on Round 2.
