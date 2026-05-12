@@ -1,5 +1,5 @@
 ## Day 1 — 2025-05-07
-**Hours worked:** 4
+**Hours worked:** 3
 
 **What I did:** Got the assignment at 6:29 PM. Read the brief twice before touching code. Set up Next.js 14 with TypeScript and Tailwind. Hit a Node version issue — v25 breaks Next.js, switched to v20 via Homebrew. Copied all project files, installed deps. Fixed vitest config  — was pulling in PostCSS which broke pure Node tests. 12/13 tests passing. Named the product CostRadar. First commit pushed to GitHub.
 
@@ -10,7 +10,7 @@
 **Plan for tomorrow:** Supabase setup, get all API keys, .env.local, deploy to Vercel.
 
 ## Day 2 — 2025-05-08
-**Hours worked:** 5
+**Hours worked:** 2
 
 **What I did:** Fixed Tailwind CSS — was using v4 syntax but Next.js 14 needs v3. Switched postcss config. Created Supabase project, ran SQL to create audits and leads tables. Connected .env.local with all API keys — Supabase, Resend, Anthropic. Full audit flow working end to end locally — form → results → shareable URL. Fixed Supabase  TypeScript type error in audit route using type cast. CI pipeline  now green on GitHub. Started Vercel deploy — hit project name conflict, will resolve tomorrow.
 
@@ -21,7 +21,7 @@
 **Plan for tomorrow:** Complete Vercel deploy, get live URL, update NEXT_PUBLIC_BASE_URL, test full flow on production.
 
 ## Day 3 — 2025-05-08
-**Hours worked:** 4
+**Hours worked:** 2
 
 **What I did:** Fixed Vercel deployment — was failing due to Supabase TypeScript type errors on build. Cast supabase client to any in audit and leads routes. Fixed invalid API key error — Supabase anon key was incorrect in Vercel env vars, replaced with correct legacy key. App is now fully live at https://costradar-nu.vercel.app. Full flow working on production.
 
@@ -43,7 +43,7 @@
 **Plan for tomorrow:** Fix failing test, run Lighthouse on live URL, take 3 screenshots for README, start REFLECTION.md.
 
 ## Day 5 — 2025-05-10
-**Hours worked:** 3
+**Hours worked:** 2
 
 **What I did:** All 13 tests passing - no fixes needed. Ran Lighthouse on live URL via PageSpeed Insights - scored 100/96/100/100 on mobile, exceeding all requirements. Took screenshots of landing page, results page, and Lighthouse
 scores for README. Will add screenshots to repo tomorrow.
@@ -55,7 +55,7 @@ scores for README. Will add screenshots to repo tomorrow.
 **Plan for tomorrow:** Add screenshots to README, write REFLECTION.md, review all markdown files before submission.
 
 ## Day 6 — 2025-05-11
-**Hours worked:** 4
+**Hours worked:** 2
 
 **What I did:** Went through the complete project today - reviewed every file and thought about what could be improved or enhanced. Looked at the audit engine logic, the API routes, and the component structure to see if anything felt off. Rewrote the README to reflect real work - went through a few iterations to get the tone right and  away from AI-sounding language. Added 3 live screenshots to the README - landing page, audit results showing real savings, and Lighthouse scores (100/96/100/100 on mobile).
 
@@ -66,7 +66,7 @@ scores for README. Will add screenshots to repo tomorrow.
 **Plan for tomorrow:** Write Day 7 DEVLOG, run commit count check, submit Google Form.
 
 ## Day 7 — 2025-05-12
-**Hours worked:** 2
+**Hours worked:** 1
 
 **What I did:** Submission day. Started with a final check on everything - ran the commit count, verified all markdown files are present, tested the live URL end to end. While reviewing the GitHub repo noticed the screenshots weren't displaying - turned out the file names had an extra .page in them which didn't match the paths written in README. Renamed the files and pushed the fix, screenshots now show correctly. Confirmed all 6 MVP features are working on production - form, results, AI summary, email capture, shareable URL, Supabase saving. All 13 tests passing, CI green, Lighthouse 100/96/100/100. Submitted the Google Form with repo and live URL.
 
