@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: 'CostRadar <audit@yourdomain.com>',
+      from: `CostRadar <${process.env.RESEND_FROM_EMAIL}>`,
       to: body.email,
       subject: `Your audit: $${Math.round(body.monthlySavings)}/mo in potential savings`,
       html: buildEmail({ ...body, isHighValue, baseUrl }),
