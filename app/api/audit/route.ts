@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase'
 import { runAudit } from '@/lib/auditEngine'
 import type { AuditInput } from '@/lib/auditEngine'
+import { getPricingSnapshot } from '@/lib/pricing'
 
 export async function POST(req: NextRequest) {
   let input: AuditInput
@@ -17,6 +18,7 @@ export async function POST(req: NextRequest) {
   }
 
   const result = runAudit(input)
+  const pricingSnapshot = getPricingSnapshot()
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const db = supabase as any
@@ -34,6 +36,7 @@ export async function POST(req: NextRequest) {
       show_credex: result.showCredex,
       is_already_optimal: result.isAlreadyOptimal,
       ai_summary: null,
+      pricing_snapshot: pricingSnapshot,
     })
     .select('id')
     .single()
