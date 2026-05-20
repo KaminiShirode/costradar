@@ -15,6 +15,9 @@ export type AuditRow = {
   show_credex: boolean
   is_already_optimal: boolean
   ai_summary: string | null
+  email: string | null
+  pricing_snapshot: unknown // serialized TOOLS array at audit time — used for change detection
+  notified_at: string | null
 }
 
 export type LeadRow = {
