@@ -65,15 +65,17 @@ export async function POST(req: NextRequest) {
 
   if (dbError) {
     console.error('Lead insert error:', dbError)
-    // Don't surface DB errors to users — still send the email
   }
+
+  // Save the email to the audit row so the detection job can notify this user later
+  await (supabase as any).from('audits').update({ email: body.email }).eq('id', body.auditId)
 
   const isHighValue = body.monthlySavings > 500
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000'
 
   try {
     await resend.emails.send({
-      from: 'CostRadar <audit@yourdomain.com>',
+      from: `CostRadar <${process.env.RESEND_FROM_EMAIL}>`,
       to: body.email,
       subject: `Your audit: $${Math.round(body.monthlySavings)}/mo in potential savings`,
       html: buildEmail({ ...body, isHighValue, baseUrl }),

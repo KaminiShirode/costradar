@@ -287,3 +287,35 @@ export const TOOLS: Record<ToolId, Tool> = {
 
 export const TOOL_IDS = Object.keys(TOOLS) as ToolId[]
 export const TOOL_LIST = Object.values(TOOLS)
+
+// ─── Pricing snapshot ─────────────────────────────────────────────────────
+// Saves a copy of all current prices when an audit runs. Used later to check if anything changed.
+
+export type PricingSnapshot = {
+  capturedAt: string
+  tools: Record<string, {
+    plans: Array<{
+      name: string
+      pricePerSeat: number
+      minSeats?: number
+      maxSeats?: number
+    }>
+  }>
+}
+
+export function getPricingSnapshot(): PricingSnapshot {
+  const tools: PricingSnapshot['tools'] = {}
+
+  for (const [id, tool] of Object.entries(TOOLS)) {
+    tools[id] = {
+      plans: tool.plans.map(p => ({
+        name: p.name,
+        pricePerSeat: p.pricePerSeat,
+        ...(p.minSeats !== undefined && { minSeats: p.minSeats }),
+        ...(p.maxSeats !== undefined && { maxSeats: p.maxSeats }),
+      })),
+    }
+  }
+
+  return { capturedAt: new Date().toISOString(), tools }
+}
