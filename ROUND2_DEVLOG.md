@@ -65,3 +65,11 @@ Went back to check the devlog against git log and found the timestamps were off 
 ## 2026-05-21 00:30 – Wrapping up for the night
 
 All 4 features committed and pushed. Reviewed devlog for accuracy. Picking up tomorrow morning with ROUND2_PR.md, ROUND2_REFLECTION.md, deploy check, and PR.
+
+## 2026-05-21 09:30 – End-to-end testing
+
+Added RESEND_FROM_EMAIL to Vercel env variables. Tested all 4 features on the preview deployment — all working. Submitted audit, gave email, changed Cursor Pro price from $20 to $25, triggered /api/detect-changes, got the notification email, clicked through to the diff view. Everything worked as expected.
+
+One blocker — local Supabase connection failed with "Invalid API key". The anon key in .env.local was outdated. Fixed by copying the fresh key from Supabase dashboard. Lost about 15 minutes.
+
+Reverted Cursor price back to $20 after testing.
